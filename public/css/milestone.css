@@ -1,0 +1,51 @@
+.milestone-section {
+    background: linear-gradient(to right, #411e17, #000000); /* custom background */
+    position: relative;
+  }
+  
+  .timeline {
+    position: relative;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 15px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    top: 4px;
+    left: -10px;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .timeline-dot.highlight {
+    background-color: #8b7d70;
+    border: 2px solid white;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: -13px;
+  }
+  
+  .timeline-month {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #9fc9d8;
+    margin-bottom: 4px;
+  }
+  
+  .timeline-desc {
+    font-size: 0.95rem;
+    color: #fff;
+    margin: 0;
+  }
+  

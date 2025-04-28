@@ -1,0 +1,53 @@
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: black; /* Ensure full background */
+  }
+  
+  /* Globe Background */
+  .globe-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .globe {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* full visibility */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  /* Centered Content */
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-sub {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  

@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Suisse Works';
+    src: url('/fonts/Suisse Works Bold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'PP Pangram Sans';
+    src: url('/fonts/PP Pangram Sans Rounded Medium.woff') format('woff');
+  }
+
+      /* For white placeholder text */
+      ::placeholder {
+        color: white !important;
+        opacity: 1; /* Optional: make sure it's fully visible */
+      }
+      
+      /* For better browser support */
+      input::placeholder,
+      textarea::placeholder {
+        color: white !important;
+        opacity: 1;
+      }
+  
+      html {
+        scroll-behavior: smooth;
+      }
+
+  :root {
+    --font-header: 'Suisse Works', Times, serif;
+    --font-body: 'PP Pangram Sans', sans-serif;
+    --color-dark: #000;
+    --color-light: #fff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    font-family: var(--font-body);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  .head-color{
+    color:#ad715c;
+    margin-bottom: 1.2rem;
+ }
+
+ .brandsecondary-color{
+  color:#ac9f93;
+  margin-bottom: 1.2rem;
+}
+
+
+
+  h1, h2, h3 {
+    font-family: var(--font-header);
+    font-weight: bold;
+  }
+
+  p {
+    font-family: var(--font-body);
+
+  }
+  section {
+    position: relative;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .section-sub {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .btn-light-outline {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .btn-light-outline:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+
+
+  /* Gradient separator between sections */
+  section:not(#footer)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to bottom, transparent, #000);
+    z-index: 5;
+  }
+
+  /* Footer */
+  #footer {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  #footer p {
+    font-size: 0.875rem;
+    color: #888;
+    text-align: center;
+  }
+
+  /* MOBILE ADJUSTMENTS */
+  @media (max-width: 768px) {
+    .btn-light-outline {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+
+
+  }
+
+  @media (max-width: 480px) {
+    section {
+      padding: 4rem 1rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .metrics-section {
+      padding: 60px 20px;
+    }
+  
+    .metrics-title {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  
+    .metric-number {
+      font-size: 3rem;
+    }
+  
+    .metric-subtitle {
+      font-size: 0.85rem;
+    }
+  
+    .metric-text {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  
+    .metrics-section .row > div {
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+
+  }
+  
