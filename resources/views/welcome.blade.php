@@ -1,125 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+@extends('layouts.index')
 
-
-  <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
-
-  <link href="/css/cosmo.css" rel="stylesheet">
-  <link href="/css/theme.css" rel="stylesheet">
-
-  <link href="/css/milestone.css" rel="stylesheet">
-
-  <link rel="icon" href="images/logo.png" type="image/png">
-  
-  <title>AO Foundation</title>
-
-
-  <style>
-.logo-wrapper {
-  transform: rotate(-3deg);
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 200px;
-}
-
-.logo-track {
-  position: absolute;
-  width: 200%;
-  display: flex;
-  top: 0;
-  left: 0;
-}
-
-.logo-strip {
-  display: flex;
-  animation: scroll-left 50s linear infinite;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-name: scroll-left;
-  gap: 5rem;
-}
-
-.row2 .logo-strip {
-
-  animation: scroll-right 50s linear infinite;
-}
-
-.logo-strip img {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-}
-
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes scroll-right {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
-}
-
-@media (max-width: 768px) {
-  .logo-wrapper {
-    height: 150px;
-    transform: rotate(-2deg);
-  }
-
-  .logo-strip img {
-    height: 60px;
-  }
-}
-
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 1.8s ease-out;
-}
-
-
-
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-    </style>
-</head>
-
-<body>
-
-<div id="starfield"></div>
-
-
- 
-<main>
-
-  <!-- HEADER -->
-  <div class="container nav-dark">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
-  <img src="images/logo.png" alt="AO Foundation Logo" width="100" height="auto" class="me-2">
-  <span class="fs-4">AO FOUNDATION</span>
-</a>
-
-<ul class="nav nav-pills">
-  <li class="nav-item"><a href="#home" class="nav-link brandsecondary-color" aria-current="page">Home</a></li>
-  <li class="nav-item"><a href="#about" class="nav-link text-light">About</a></li>
-  <li class="nav-item"><a href="#events" class="nav-link text-light">Events</a></li>
-  <li class="nav-item"><a href="#core-services" class="nav-link text-light">Services</a></li>
-  <li class="nav-item"><a href="#clients" class="nav-link text-light">Clients</a></li>
-  <li class="nav-item"><a href="#contact" class="nav-link text-light">Contact</a></li>
-</ul>
-    </header>
-</main>
-
+@section('center')
 
 <!-- Hero Video Section -->
 <section id="home" class="position-relative overflow-hidden text-white" style="height: 60vh;">
@@ -311,6 +192,7 @@
 </section>
 
 
+
 <div id="clients" class="text-center col-12">
       <h2 class="section-title head-color animate-on-scroll">Our Clients</h2>
 
@@ -319,7 +201,7 @@
     </div>
 
 <!-- First Logo Carousel -->
-<div class="container-fluid mt-5">
+<div style="background-color:black;" class="container-fluid mt-5 ">
   <div class="logo-wrapper mx-auto">
     <div class="logo-track row1">
       <div class="logo-strip">
@@ -404,6 +286,8 @@
     </div>
   </div>
 </div>
+
+
 
 <!-- EXAMPLES OF PREVIOUS WORK -->
 <section id="previous-work" class="py-5 text-white">
@@ -621,94 +505,6 @@ textarea::placeholder {
 
 
   <hr class="text-light col-12">
-  <footer class=" text-white py-5">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Left: Logo + Downloads -->
-      <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
-        <img src="images/logo.png" alt="AO Logo" style="max-width: 120px;" class="mb-3">
-        <h5 class="mb-3">Where stories come together.</h5>
-        <div class="d-flex flex-column flex-sm-row gap-2">
-
-        </div>
-        <div class="mt-4 d-flex gap-3 justify-content-center justify-content-md-start">
-          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-threads"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-
-      <!-- Middle: Info Links -->
-      <div class="col-md-4 mb-4 mb-md-0">
-
-        <ul class="list-unstyled">
-          <li class="mb-2"><br><strong class="brandsecondary-color">Visit us:</strong><br>KIPCO Tower, Khalid Bin Al Waleed Street, Sharq, Kuwait City</li>
-          <li class="mb-2"><br><strong class="brandsecondary-color">Email us:</strong><br>Mrs. Abeer Al Omar<br><small>General Manager</small><br>
-            <a href="mailto:Abeer@ao-project.com" class="text-white text-decoration-underline">faten@ao-project.com</a>
-          </li>
-          <li><br><strong class="brandsecondary-color">Call us:</strong><br>
-            <a href="tel:+96566303777" class="text-white text-decoration-none">+965 66303777</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right: Tags/Topics -->
-      <div class="col-md-4">
-        <h6 class="fw-bold">Highlights</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge bg-light text-dark">Innovation</span>
-          <span class="badge bg-light text-dark">Technology</span>
-          <span class="badge bg-light text-dark">Community</span>
-          <span class="badge bg-light text-dark">Leadership</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom -->
-    <div class="mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <p class="mb-2 mb-md-0">© 2025 AO Foundation</p>
-      <div class="d-flex gap-3">
-        <a href="#" class="text-white text-decoration-none">Terms of Use</a>
-        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
-      <!--   <a href="#" class="text-white text-decoration-none">License</a>
-        <a href="#" class="text-white text-decoration-none">Cookies</a>-->
-      </div>
-    </div>
-  </div>
-</footer>
 
 
-
-  <script src="/js/stars.js"></script>
-
-  <script src="js/logo.js"></script>
-  <script src="/js/globe.js"></script>
-  <script src="/js/numbers.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    animatedElements.forEach(el => observer.observe(el));
-  });
-</script>
-
-</body>
-</html>
+@endsection

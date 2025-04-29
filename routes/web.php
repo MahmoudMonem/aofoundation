@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ResponsesController;
 
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/contact', [ResponsesController::class, 'store'])->name('contact.store');
+
+Route::get('privacy-policy', [PagesController::class, 'privacy_policy'])->name('ppPage');
+Route::get('terms-and-conditions', [PagesController::class, 'terms_and_conditions'])->name('tocPage');
