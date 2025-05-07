@@ -86,6 +86,6 @@
     animatedElements.forEach(el => observer.observe(el));
   });
 </script>
-
+<div id="starfield"></div>
 </body>
 </html>

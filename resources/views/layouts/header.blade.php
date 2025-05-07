@@ -40,7 +40,7 @@
 
 .logo-strip {
   display: flex;
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 30s linear infinite;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-name: scroll-left;
@@ -50,7 +50,7 @@
 
 .row2 .logo-strip {
 
-  animation: scroll-right 50s linear infinite;
+  animation: scroll-right 30s linear infinite;
 }
 
 .logo-strip img {
@@ -97,7 +97,7 @@
 
 <body>
 
-<div id="starfield"></div>
+
 
 
  

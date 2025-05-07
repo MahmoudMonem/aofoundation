@@ -88,10 +88,10 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{{ asset('images/carousel/1 (1).jpg') }}" class="d-block w-100 img-fluid" alt="Slide 1">
+              <img src="{{ asset('images/carousel/1(1).JPG') }}" class="d-block w-100 img-fluid" alt="Slide 1">
             </div>
             <div class="carousel-item">
-              <img src="{{ asset('images/carousel/1 (2).jpg') }}" class="d-block w-100 img-fluid" alt="Slide 2">
+              <img src="{{ asset('images/carousel/1(2).JPG') }}" class="d-block w-100 img-fluid" alt="Slide 2">
             </div>
             <!-- Add additional slides as needed -->
           </div>
@@ -112,58 +112,58 @@
 
 
 
-  <!-- SERVICES -->
+ <!-- SERVICES -->
 <!-- CORE SERVICES -->
-<section id="core-services" class="py-5 text-white ">
+<section id="core-services" class="py-5 text-white">
   <div class="container content-wrapper animate-on-scroll col-6">
     <h2 class="section-title mb-4 head-color">Our Core Services</h2><br>
     <div class="row g-4">
       <div class="col-md-6 col-lg-4">
         <h5 class="brandsecondary-color">Medical Writing Services</h5>
         <p>
-          Manuscript writing & editing, board support, abstracts, posters, and grant writing.
+          Manuscript writing and editing, advisory board support and documentation, conference abstracts and posters, grant writing assistance.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="brandsecondary-color">Clinical Research Support</h5>
         <p>
-          Protocols, study docs, investigator brochures, CSR, SAP, and conference support.
+          Protocol development, study documentation, investigator brochures, study proposals, protocols, CSR, SAR, SAP, and conference abstracts and presentations.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="brandsecondary-color">Data Management & Statistical Analysis</h5>
         <p>
-          Comprehensive data handling, reporting, and statistical analysis.
+          Comprehensive data management, statistical analysis, and reporting.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Medical Affairs & Training</h5>
+        <h5 class="brandsecondary-color">Medical Affairs Services & Training</h5>
         <p>
-          CME modules, training for field medical affairs, and content development.
+          Medical education workshops (CME), customized training programs for medical affairs professionals.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Infographics & Visuals</h5>
+        <h5 class="brandsecondary-color">Infographic & Visual Solutions</h5>
         <p>
-          Simplifying medical data via custom infographics and graphical abstracts.
+          Professional infographic creation to simplify complex medical data and graphical abstracts.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Publication & Journal Compliance</h5>
+        <h5 class="brandsecondary-color">Publication Planning & Journal Compliance</h5>
         <p>
-          Strategic planning, journal selection, and end-to-end publication support.
+          Strategic publication plans, journal selection and compliance with editorial requirements, journal submission and follow-up.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="brandsecondary-color">Digital Solutions</h5>
         <p>
-          Medical registries, patient education tools, and mobile apps for assessment.
+          Development of medical registries, decision support tools, patient education apps, collaborative platforms for multidisciplinary teams, mobile apps for preoperative assessment.
         </p>
       </div>
       <div class="col-md-6 col-lg-4">
         <h5 class="brandsecondary-color">Conference & Event Support</h5>
         <p>
-          Abstract booklets, session coverage, and design for slides and posters.
+          Abstract booklets and proceedings, scientific coverage of key sessions, design of presentation materials (slides, posters, or reports).
         </p>
       </div>
     </div>
@@ -191,7 +191,7 @@
   </div>
 </section>
 
-
+<div class="logo-section">
 
 <div id="clients" class="text-center col-12">
       <h2 class="section-title head-color animate-on-scroll">Our Clients</h2>
@@ -209,6 +209,7 @@
         <img src="logos/Novartis.png" alt="Novartis">
         <img src="logos/novo.png" alt="Novo">
         <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
+        <img src="logos/mohealth.png" alt="Ministry of Health">
         <img src="logos/Servier.png" alt="Servier">
         <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
         <img src="logos/sanofi.png" alt="Sanofi">
@@ -221,6 +222,7 @@
         <img src="logos/Novartis.png" alt="Novartis">
         <img src="logos/novo.png" alt="Novo">
         <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
+        <img src="logos/mohealth.png" alt="Ministry of Health">
         <img src="logos/Servier.png" alt="Servier">
         <img src="logos/Viatris.png" alt="Viatris">
         <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
@@ -230,9 +232,11 @@
         <img src="logos/AMGEN.png" alt="Amgen">
         <img src="logos/Boubyan.png" alt="Boubyan Bank">
 
+        <!-- Duplicated for seamless scroll -->
         <img src="logos/Novartis.png" alt="Novartis">
         <img src="logos/novo.png" alt="Novo">
         <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
+        <img src="logos/mohealth.png" alt="Ministry of Health">
         <img src="logos/Servier.png" alt="Servier">
         <img src="logos/Viatris.png" alt="Viatris">
         <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
@@ -241,6 +245,8 @@
         <img src="logos/amryt.png" alt="Amryt">
         <img src="logos/AMGEN.png" alt="Amgen">
         <img src="logos/Boubyan.png" alt="Boubyan Bank">
+        <img src="logos/mohealth.png" alt="Ministry of Health">
+
       </div>
     </div>
   </div>
@@ -254,57 +260,107 @@
         <!-- Logos -->
         <img src="logos/AAW.png" alt="AAW">
         <img src="logos/Az.png" alt="AstraZeneca">
+        <img src="logos/KIMS.png" alt="KIMS">
         <img src="logos/Bayer.png" alt="Bayer">
         <img src="logos/BLGX.png" alt="BLGX">
         <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
         <img src="logos/genpharm.png" alt="Genpharm">
+        <img src="logos/organon.png" alt="Organon">
         <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
         <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
+        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
+
 
         <!-- Duplicated for seamless scroll -->
         <img src="logos/AAW.png" alt="AAW">
         <img src="logos/Az.png" alt="AstraZeneca">
+        <img src="logos/KIMS.png" alt="KIMS">
         <img src="logos/Bayer.png" alt="Bayer">
         <img src="logos/BLGX.png" alt="BLGX">
         <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
         <img src="logos/genpharm.png" alt="Genpharm">
+        <img src="logos/organon.png" alt="Organon">
         <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
         <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
+        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
+    
 
+
+        <!-- Duplicated for seamless scroll -->
         <img src="logos/AAW.png" alt="AAW">
         <img src="logos/Az.png" alt="AstraZeneca">
+        <img src="logos/KIMS.png" alt="KIMS">
         <img src="logos/Bayer.png" alt="Bayer">
         <img src="logos/BLGX.png" alt="BLGX">
         <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
         <img src="logos/genpharm.png" alt="Genpharm">
+        <img src="logos/organon.png" alt="Organon">
         <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
         <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
+        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
+
+
+
       </div>
     </div>
   </div>
 </div>
+</div>
 
 
-
-<!-- EXAMPLES OF PREVIOUS WORK -->
 <section id="previous-work" class="py-5 text-white">
-  <div class="container content-wrapper animate-on-scroll ">
-    <h2 class="section-title mb-4 text-center  head-color">Examples of Our Previous Work</h2>
-    <div class="row justify-content-center g-5">
-      <div class="col-sm-6 col-md-4 text-center">
-        <p class="fw-bold">Intracoronary Calcification Consensus</p>
-        <img src="images/qrcode.png" alt="QR Code 1" class="img-fluid" style="max-width: 180px;">
-      </div>
-      <div class="col-sm-6 col-md-4 text-center">
-        <p class="fw-bold">Intracoronary Imaging Consensus</p>
-        <img src="images/qrcode.png" alt="QR Code 2" class="img-fluid" style="max-width: 180px;">
-      </div>
+  <div class="container content-wrapper animate-on-scroll">
+    <h2 class="section-title mb-4 text-center head-color">Examples of Our Previous Work</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      @foreach($events as $event)
+        @php
+          $featuredeventimage = $event->eventimages->where('featured', 1)->first();
+          $nonFeaturedImages = $event->eventimages->where('featured', '!=', 1);
+        @endphp
+
+        <div class="col text-center">
+          <!-- Carousel -->
+          <span class="badge text-white d-inline-flex align-items-center px-3 py-2" style="background-color:rgb(97, 55, 40);">
+        {{ $event->created_at->format('D, M j, Y') }}
+        </span>
+          <div id="carousel-{{ $event->id }}" class="carousel slide mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              @if($featuredeventimage)
+                <div class="carousel-item active">
+                  <img src="{{ asset('events/' . $featuredeventimage->img) }}" class="d-block w-100" alt="Featured Event Image" style="max-height: 200px; object-fit: cover;">
+                </div>
+              @endif
+
+              @foreach($nonFeaturedImages as $eventimage)
+                <div class="carousel-item">
+                  <img src="{{ asset('events/' . $eventimage->img) }}" class="d-block w-100" alt="Event Image" style="max-height: 200px; object-fit: cover;">
+                </div>
+              @endforeach
+            </div>
+
+            @if($event->eventimages->count() > 1)
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ $event->id }}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ $event->id }}" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            @endif
+          </div>
+
+          <!-- Event Title & Description -->
+          <p class="fw-bold">{{ $event->title_en }}</p><br>
+
+          <p class="brandsecondary-color">{{ $event->short_desc_en }}</p>
+    
+
+        </div>
+      @endforeach
     </div>
   </div>
 </section>
+
+
 
 <!-- MEDICAL EVENT METRICS -->
 <section class="metrics-section text-light animate-on-scroll" id="metrics">

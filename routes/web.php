@@ -18,9 +18,8 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [PagesController::class, 'index'])->name('welcomePage');
 
 Auth::routes();
 

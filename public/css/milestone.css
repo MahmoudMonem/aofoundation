@@ -3,6 +3,11 @@
     position: relative;
   }
   
+  .logo-section {
+    background: #000000; /* solid black */
+    position: relative;
+    z-index: 1;
+  }
   .timeline {
     position: relative;
     border-left: 2px solid rgba(255, 255, 255, 0.3);
