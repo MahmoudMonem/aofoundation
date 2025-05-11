@@ -48,7 +48,7 @@
 
     <!-- Bottom -->
     <div class="mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <p class="mb-2 mb-md-0">© 2025 AO Foundation</p>
+      <p class="mb-2 mb-md-0">© 2025 AO International Projects Management</p>
       <div class="d-flex gap-3">
         <a href="{{route('tocPage')}}" class="text-white text-decoration-none">Terms of Use</a>
         <a href="{{route('ppPage')}}" class="text-white text-decoration-none">Privacy Policy</a>

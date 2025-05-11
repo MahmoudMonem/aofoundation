@@ -17,7 +17,7 @@
 
   <link rel="icon" href="images/logo.png" type="image/png">
   
-  <title>AO Foundation</title>
+  <title>AO International Projects Management</title>
 
 
   <style>
@@ -106,9 +106,14 @@
   <!-- HEADER -->
   <div class="container nav-dark">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
-  <img src="images/logo.png" alt="AO Foundation Logo" width="100" height="auto" class="me-2">
-  <span class="fs-4">AO FOUNDATION</span>
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+  <img src="images/logo.png" alt="AO International Projects Management Logo" width="200" height="auto" class="me-2">
+  <div>
+     <!--
+  <div class="fw-bold text-white" style="font-size: 1.5rem;">اي او انترناشيونال لإدارة المشاريع</div>
+  <div class="fw-bold text-white">International <span class="fw-normal">Projects Management</span></div>
+  -->
+  </div>
 </a>
 
 <ul class="nav nav-pills">

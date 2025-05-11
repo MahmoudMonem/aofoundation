@@ -20,7 +20,7 @@
   <div class="content-wrapper animate-on-scroll position-relative z-1 text-center text-white py-5">
     <h1 class="section-title">Events Done Right</h1>
     <p class="section-sub mx-auto" style="max-width: 600px;">
-      AO Foundation brings years of experience in medical events to a wide range of industries — helping teams plan, manage, and deliver events that leave a mark.
+      AO International Projects Management; (Advanced Orientation) brings years of experience in medical events to a wide range of industries — helping teams plan, manage, and deliver events that leave a mark.
     </p>
     <a href="#about" class="btn-light-outline">See What We Do</a>
   </div>
@@ -407,8 +407,8 @@
     <div class="row align-items-start">
 
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <p class="text-uppercase small fw-bold text-light">Celebrating getting the work done at AO Foundation</p>
-        <h2 class="display-5 fw-bold">The AO Foundation <br />Gala Awards</h2>
+        <p class="text-uppercase small fw-bold text-light">Celebrating getting the work done at AO International Projects Management</p>
+        <h2 class="display-5 fw-bold">The AO International Projects Management <br />Gala Awards</h2>
         <p class="mt-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla libero nisl, pretium nec lectus ut, venenatis euismod est. Vestibulum faucibus in eros imperdiet iaculis. Donec tincidunt blandit erat, sit amet placerat quam tempor eu. Suspendisse vitae urna non mauris tempor facilisis dapibus eget nisl. Nullam et malesuada dui. Aliquam blandit, libero at laoreet tempus, nisl orci vestibulum libero, a maximus turpis arcu ac odio. Nulla a elit viverra, facilisis augue et, accumsan est. Nam facilisis, purus sed mattis hendrerit, ligula lorem varius eros, vel pulvinar ipsum augue ut nulla. Sed iaculis auctor tempus. Maecenas sed vulputate mauris.        </p>
 
