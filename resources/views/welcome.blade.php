@@ -283,9 +283,7 @@
         <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
         <img src="logos/Lilly.png" alt="Eli Lilly">
         <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
-    
-
-
+        
         <!-- Duplicated for seamless scroll -->
         <img src="logos/AAW.png" alt="AAW">
         <img src="logos/Az.png" alt="AstraZeneca">
@@ -310,7 +308,7 @@
 
 <section id="previous-work" class="py-5 text-white">
   <div class="container content-wrapper animate-on-scroll">
-    <h2 class="section-title mb-4 text-center head-color">Examples of Our Previous Work</h2>
+    <h2 class="section-title mb-4 text-center head-color">Our Work</h2>
     <div class="row row-cols-1 row-cols-md-2 g-4">
       @foreach($events as $event)
         @php
