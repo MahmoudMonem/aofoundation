@@ -8,7 +8,7 @@
   <video autoplay muted loop playsinline id="myVideo"
     class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
     style="opacity: 0.5;">
-    <source src="videos/hero.mp4" type="video/mp4">
+    <source src="{{ site_content('hero_video', 'videos/hero.mp4') }}" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
 
@@ -18,68 +18,54 @@
 
   <!-- Hero Content -->
   <div class="content-wrapper animate-on-scroll position-relative z-1 text-center text-white py-5">
-    <h1 class="section-title">Events Done Right</h1>
+    <h1 class="section-title">{{ site_content('hero_title', 'Events Done Right') }}</h1>
     <p class="section-sub mx-auto" style="max-width: 600px;">
-      AO International Projects Management; (Advanced Orientation) brings years of experience in medical events to a wide range of industries — helping teams plan, manage, and deliver events that leave a mark.
+      {{ site_content('hero_subtitle', 'AO International Projects Management brings years of experience in medical events to a wide range of industries.') }}
     </p>
-    <a href="#about" class="btn-light-outline">See What We Do</a>
+    <a href="{{ site_content('hero_cta_link', '#about') }}" class="btn-light-outline">{{ site_content('hero_cta_text', 'See What We Do') }}</a>
   </div>
 </section>
 
-
-
-
-
-</section>
-
+<!-- Events Section -->
 <section id="events" class="milestone-section py-5 text-light animate-on-scroll">
   <div class="container">
     <div class="row align-items-center">
       <!-- Text Content -->
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <p class="text-uppercase small brandsecondary-color">Events</p>
-        <h2 class="fw-bold display-5">Our global events</h2>
+        <p class="text-uppercase small brandsecondary-color">{{ site_content('events_label', 'Events') }}</p>
+        <h2 class="fw-bold display-5">{{ site_content('events_title', 'Our global events') }}</h2>
         <p class="text-left">
-          We host invitation-only events at key climate moments as well as
-          community and partner-led gatherings in cities around the world.
-          These moments enable guests to learn from each other, explore deal
-          flow and create connections, encouraging collaboration.
+          {{ site_content('events_description_1', 'We host invitation-only events at key climate moments as well as community and partner-led gatherings in cities around the world.') }}
         </p>
         <p class="text-left">
-          Trust is built in rooms, not virtual rooms. <br />
-          We put humanity back in the room.
+          {{ site_content('events_description_2', 'Trust is built in rooms, not virtual rooms. We put humanity back in the room.') }}
         </p>
-        <div class=" mt-3">
-
-          <a href="#contact" class="btn btn-primary rounded-pill"> Get in touch <span class="arrow">→</span></a>
-   
+        <div class="mt-3">
+          <a href="#contact" class="btn btn-primary rounded-pill">{{ site_content('events_cta_text', 'Get in touch') }} <span class="arrow">→</span></a>
         </div>
       </div>
 
       <!-- Image -->
       <div class="col-lg-6 text-center">
         <div class="event-image-wrapper mx-auto">
-          <img src="/images/vfc.jpg" alt="Event Photo" class="img-fluid rounded shadow event-image" />
+          <img src="{{ site_content('events_image', '/images/vfc.jpg') }}" alt="Event Photo" class="img-fluid rounded shadow event-image" />
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ABOUT -->
 <!-- WHO WE ARE -->
-<section id="about" id="who-we-are" class="py-5 text-white">
+<section id="about" class="py-5 text-white">
   <div class="container content-wrapper animate-on-scroll">
     <div class="row align-items-center">
-
       <!-- Text Column -->
       <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-        <h2 class="section-title head-color text-center text-lg-start"> Who We Are</h2>
+        <h2 class="section-title head-color text-center text-lg-start">{{ site_content('about_title', 'Who We Are') }}</h2>
         <p class="mt-3 text-center text-lg-start">
-          AO International Projects Management Co. is a full-service management company specialized in marketing strategy, business process optimization, planning conferences, exhibitions, seminars, health awareness campaigns, and professional events.
+          {{ site_content('about_description_1', 'AO International Projects Management Co. is a full-service management company specialized in marketing strategy, business process optimization, planning conferences, exhibitions, seminars, health awareness campaigns, and professional events.') }}
           <br><br>
-          AO International Projects Management is a trusted provider of comprehensive medical writing, clinical research support, and data management services. With a commitment to precision, efficiency, and affordability, we collaborate with healthcare professionals, pharmaceutical companies, and KOLs to deliver impactful, evidence-based scientific content.
+          {{ site_content('about_description_2', 'AO International Projects Management is a trusted provider of comprehensive medical writing, clinical research support, and data management services.') }}
         </p>
       </div>
 
@@ -93,7 +79,6 @@
             <div class="carousel-item">
               <img src="{{ asset('images/carousel/1(2).JPG') }}" class="d-block w-100 img-fluid" alt="Slide 2">
             </div>
-            <!-- Add additional slides as needed -->
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,210 +90,108 @@
           </button>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
- <!-- SERVICES -->
 <!-- CORE SERVICES -->
 <section id="core-services" class="py-5 text-white">
   <div class="container content-wrapper animate-on-scroll col-6">
-    <h2 class="section-title mb-4 head-color">Our Core Services</h2><br>
+    <h2 class="section-title mb-4 head-color">{{ site_content('services_title', 'Our Core Services') }}</h2><br>
     <div class="row g-4">
+      @for($i = 1; $i <= 8; $i++)
       <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Medical Writing Services</h5>
-        <p>
-          Manuscript writing and editing, advisory board support and documentation, conference abstracts and posters, grant writing assistance.
-        </p>
+        <h5 class="brandsecondary-color">{{ site_content("service_{$i}_title", "Service {$i}") }}</h5>
+        <p>{{ site_content("service_{$i}_description", '') }}</p>
       </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Clinical Research Support</h5>
-        <p>
-          Protocol development, study documentation, investigator brochures, study proposals, protocols, CSR, SAR, SAP, and conference abstracts and presentations.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Data Management & Statistical Analysis</h5>
-        <p>
-          Comprehensive data management, statistical analysis, and reporting.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Medical Affairs Services & Training</h5>
-        <p>
-          Medical education workshops (CME), customized training programs for medical affairs professionals.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Infographic & Visual Solutions</h5>
-        <p>
-          Professional infographic creation to simplify complex medical data and graphical abstracts.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Publication Planning & Journal Compliance</h5>
-        <p>
-          Strategic publication plans, journal selection and compliance with editorial requirements, journal submission and follow-up.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Digital Solutions</h5>
-        <p>
-          Development of medical registries, decision support tools, patient education apps, collaborative platforms for multidisciplinary teams, mobile apps for preoperative assessment.
-        </p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h5 class="brandsecondary-color">Conference & Event Support</h5>
-        <p>
-          Abstract booklets and proceedings, scientific coverage of key sessions, design of presentation materials (slides, posters, or reports).
-        </p>
-      </div>
+      @endfor
     </div>
   </div>
 </section>
 
 <!-- WHY CHOOSE US -->
 <section id="why-choose-us" class="py-5 text-white">
-
   <div class="container content-wrapper animate-on-scroll">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-title head-color">Why Choose Us?</h2><br>
-  
-        <img src="images/whyus.jpg" alt="AO team or process" class="img-fluid rounded">
+        <h2 class="section-title head-color">{{ site_content('why_title', 'Why Choose Us?') }}</h2><br>
+        <img src="{{ site_content('why_image', 'images/whyus.jpg') }}" alt="AO team or process" class="img-fluid rounded">
 
-      <div class="text-start d-inline-block mt-3">
-      <br>  <br><p><strong class="brandsecondary-color">Unmatched Quality:</strong> Every project is handled with scientific precision and attention to detail.</p>
-          <p><strong class="brandsecondary-color">Timely Delivery:</strong> We meet deadlines without compromise.</p>
-          <p><strong class="brandsecondary-color">Cost-Effective Solutions:</strong> Affordability with zero compromise on quality.</p>
+        <div class="text-start d-inline-block mt-3">
+          <br><br>
+          <p><strong class="brandsecondary-color">{{ site_content('why_point_1_title', 'Unmatched Quality') }}:</strong> {{ site_content('why_point_1_description', 'Every project is handled with scientific precision and attention to detail.') }}</p>
+          <p><strong class="brandsecondary-color">{{ site_content('why_point_2_title', 'Timely Delivery') }}:</strong> {{ site_content('why_point_2_description', 'We meet deadlines without compromise.') }}</p>
+          <p><strong class="brandsecondary-color">{{ site_content('why_point_3_title', 'Cost-Effective Solutions') }}:</strong> {{ site_content('why_point_3_description', 'Affordability with zero compromise on quality.') }}</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
+<!-- CLIENTS SECTION -->
 <div class="logo-section">
-
-<div id="clients" class="text-center col-12">
-      <h2 class="section-title head-color animate-on-scroll">Our Clients</h2>
-
-      <p class="brandsecondary-color">We are working with a range of incredible global partners including:</p>
-
+    <div id="clients" class="text-center col-12">
+        <h2 class="section-title head-color animate-on-scroll">{{ site_content('clients_title', 'Our Clients') }}</h2>
+        <p class="brandsecondary-color">{{ site_content('clients_subtitle', 'We are working with a range of incredible global partners including:') }}</p>
     </div>
 
-<!-- First Logo Carousel -->
-<div style="background-color:black;" class="container-fluid mt-5 ">
-  <div class="logo-wrapper mx-auto">
-    <div class="logo-track row1">
-      <div class="logo-strip">
-        <!-- Logos -->
-        <img src="logos/Novartis.png" alt="Novartis">
-        <img src="logos/novo.png" alt="Novo">
-        <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
-        <img src="logos/Servier.png" alt="Servier">
-        <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
-        <img src="logos/sanofi.png" alt="Sanofi">
-        <img src="logos/Algo.png" alt="Algo">
-        <img src="logos/amryt.png" alt="Amryt">
-        <img src="logos/AMGEN.png" alt="Amgen">
-        <img src="logos/Boubyan.png" alt="Boubyan Bank">
-
-        <!-- Duplicated for seamless scroll -->
-        <img src="logos/Novartis.png" alt="Novartis">
-        <img src="logos/novo.png" alt="Novo">
-        <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
-        <img src="logos/Servier.png" alt="Servier">
-        <img src="logos/Viatris.png" alt="Viatris">
-        <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
-        <img src="logos/sanofi.png" alt="Sanofi">
-        <img src="logos/Algo.png" alt="Algo">
-        <img src="logos/amryt.png" alt="Amryt">
-        <img src="logos/AMGEN.png" alt="Amgen">
-        <img src="logos/Boubyan.png" alt="Boubyan Bank">
-
-        <!-- Duplicated for seamless scroll -->
-        <img src="logos/Novartis.png" alt="Novartis">
-        <img src="logos/novo.png" alt="Novo">
-        <img src="logos/sabahalahmad.png" alt="Sabah Al Ahmad">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
-        <img src="logos/Servier.png" alt="Servier">
-        <img src="logos/Viatris.png" alt="Viatris">
-        <img src="logos/hamdsaleh.png" alt="Hamed Saleh">
-        <img src="logos/sanofi.png" alt="Sanofi">
-        <img src="logos/Algo.png" alt="Algo">
-        <img src="logos/amryt.png" alt="Amryt">
-        <img src="logos/AMGEN.png" alt="Amgen">
-        <img src="logos/Boubyan.png" alt="Boubyan Bank">
-        <img src="logos/mohealth.png" alt="Ministry of Health">
-
-      </div>
+    @if(isset($clientLogosRow1) && $clientLogosRow1->count() > 0)
+    <!-- First Logo Carousel -->
+    <div style="background-color:black;" class="container-fluid mt-5">
+        <div class="logo-wrapper mx-auto">
+            <div class="logo-track row1">
+                <div class="logo-strip">
+                    {{-- First set of logos --}}
+                    @foreach($clientLogosRow1 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                    
+                    {{-- Duplicated for seamless scroll --}}
+                    @foreach($clientLogosRow1 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                    
+                    {{-- Third set for longer seamless scroll --}}
+                    @foreach($clientLogosRow1 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    @endif
 
-<!-- Second Logo Carousel -->
-<div class="container-fluid ">
-  <div class="logo-wrapper mx-auto">
-    <div class="logo-track row1">
-      <div class="logo-strip">
-        <!-- Logos -->
-        <img src="logos/AAW.png" alt="AAW">
-        <img src="logos/Az.png" alt="AstraZeneca">
-        <img src="logos/KIMS.png" alt="KIMS">
-        <img src="logos/Bayer.png" alt="Bayer">
-        <img src="logos/BLGX.png" alt="BLGX">
-        <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
-        <img src="logos/genpharm.png" alt="Genpharm">
-        <img src="logos/organon.png" alt="Organon">
-        <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
-        <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
-
-
-        <!-- Duplicated for seamless scroll -->
-        <img src="logos/AAW.png" alt="AAW">
-        <img src="logos/Az.png" alt="AstraZeneca">
-        <img src="logos/KIMS.png" alt="KIMS">
-        <img src="logos/Bayer.png" alt="Bayer">
-        <img src="logos/BLGX.png" alt="BLGX">
-        <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
-        <img src="logos/genpharm.png" alt="Genpharm">
-        <img src="logos/organon.png" alt="Organon">
-        <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
-        <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
-        
-        <!-- Duplicated for seamless scroll -->
-        <img src="logos/AAW.png" alt="AAW">
-        <img src="logos/Az.png" alt="AstraZeneca">
-        <img src="logos/KIMS.png" alt="KIMS">
-        <img src="logos/Bayer.png" alt="Bayer">
-        <img src="logos/BLGX.png" alt="BLGX">
-        <img src="logos/boehringer.png" alt="Boehringer Ingelheim">
-        <img src="logos/genpharm.png" alt="Genpharm">
-        <img src="logos/organon.png" alt="Organon">
-        <img src="logos/KHF.png" alt="Kuwait Heart Foundation">
-        <img src="logos/Lilly.png" alt="Eli Lilly">
-        <img src="logos/bristol.png" alt="Bristol Mayers Squibb">
-
-
-
-      </div>
+    @if(isset($clientLogosRow2) && $clientLogosRow2->count() > 0)
+    <!-- Second Logo Carousel -->
+    <div class="container-fluid">
+        <div class="logo-wrapper mx-auto">
+            <div class="logo-track row1">
+                <div class="logo-strip">
+                    {{-- First set of logos --}}
+                    @foreach($clientLogosRow2 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                    
+                    {{-- Duplicated for seamless scroll --}}
+                    @foreach($clientLogosRow2 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                    
+                    {{-- Third set for longer seamless scroll --}}
+                    @foreach($clientLogosRow2 as $logo)
+                        <img src="{{ asset($logo->logo) }}" alt="{{ $logo->name }}">
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    @endif
 </div>
 
-
+<!-- OUR WORK / PREVIOUS EVENTS -->
 <section id="previous-work" class="py-5 text-white">
   <div class="container content-wrapper animate-on-scroll">
-    <h2 class="section-title mb-4 text-center head-color">Our Work</h2>
+    <h2 class="section-title mb-4 text-center head-color">{{ site_content('work_title', 'Our Work') }}</h2>
     <div class="row row-cols-1 row-cols-md-2 g-4">
       @foreach($events as $event)
         @php
@@ -317,10 +200,9 @@
         @endphp
 
         <div class="col text-center">
-          <!-- Carousel -->
           <span class="badge text-white d-inline-flex align-items-center px-3 py-2" style="background-color:rgb(97, 55, 40);">
-        {{ $event->created_at->format('D, M j, Y') }}
-        </span>
+            {{ $event->created_at->format('D, M j, Y') }}
+          </span>
           <div id="carousel-{{ $event->id }}" class="carousel slide mb-3" data-bs-ride="carousel">
             <div class="carousel-inner">
               @if($featuredeventimage)
@@ -346,138 +228,54 @@
             @endif
           </div>
 
-          <!-- Event Title & Description -->
           <p class="fw-bold">{{ $event->title_en }}</p><br>
-
           <p class="brandsecondary-color">{{ $event->short_desc_en }}</p>
-    
-
         </div>
       @endforeach
     </div>
   </div>
 </section>
 
-
-
 <!-- MEDICAL EVENT METRICS -->
 <section class="metrics-section text-light animate-on-scroll" id="metrics">
   <div class="container text-center animate-on-scroll">
-    <p class="metrics-label text-uppercase mb-2">Our Metrics + Impact</p>
+    <p class="metrics-label text-uppercase mb-2">{{ site_content('metrics_label', 'Our Metrics + Impact') }}</p>
     <h1 class="metrics-title mb-4 head-color">
-      The following medical event outcomes have been established:
+      {{ site_content('metrics_title', 'The following medical event outcomes have been established:') }}
     </h1>
     <hr class="mx-auto mb-5" style="max-width: 600px; border-color: rgba(255,255,255,0.2);" />
 
     <div class="row justify-content-center gy-5">
       <!-- Metric 1 -->
       <div class="col-12 col-md-4">
-        <h1 class="section-title counter" data-target="97">0</h1>
-        <p class="metric-subtitle text-uppercase  head-color">Knowledge Retention</p>
-        <p class="metric-text">
-          of participants reported improved understanding of clinical procedures
-        </p>
+        <h1 class="section-title counter" data-target="{{ site_content('metric_1_value', '97') }}">0</h1>
+        <p class="metric-subtitle text-uppercase head-color">{{ site_content('metric_1_label', 'Knowledge Retention') }}</p>
+        <p class="metric-text">{{ site_content('metric_1_description', 'of participants reported improved understanding of clinical procedures') }}</p>
       </div>
 
       <!-- Metric 2 -->
       <div class="col-12 col-md-4">
-        <h1 class="section-title counter" data-target="98">0</h1>
-        <p class="metric-subtitle text-uppercase  head-color">NPS Score</p>
-        <p class="metric-text">
-          A blended Net Promoter Score of 98 across international AO events
-        </p>
+        <h1 class="section-title counter" data-target="{{ site_content('metric_2_value', '98') }}">0</h1>
+        <p class="metric-subtitle text-uppercase head-color">{{ site_content('metric_2_label', 'NPS Score') }}</p>
+        <p class="metric-text">{{ site_content('metric_2_description', 'A blended Net Promoter Score of 98 across international AO events') }}</p>
       </div>
 
       <!-- Metric 3 -->
       <div class="col-12 col-md-4">
-        <h1 class="section-title counter" data-target="94">0</h1>
-        <p class="metric-subtitle text-uppercase  head-color">Global Collaboration</p>
-        <p class="metric-text">
-          of attendees made a new global research or clinical connection
-        </p>
+        <h1 class="section-title counter" data-target="{{ site_content('metric_3_value', '94') }}">0</h1>
+        <p class="metric-subtitle text-uppercase head-color">{{ site_content('metric_3_label', 'Global Collaboration') }}</p>
+        <p class="metric-text">{{ site_content('metric_3_description', 'of attendees made a new global research or clinical connection') }}</p>
       </div>
     </div>
   </div>
 </section>
-  <!-- 
-<section class="milestone-section py-5 text-light animate-on-scroll">
-  <div class="container">
-    <div class="row align-items-start">
-
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <p class="text-uppercase small fw-bold text-light">Celebrating getting the work done at AO International Projects Management</p>
-        <h2 class="display-5 fw-bold">The AO International Projects Management <br />Gala Awards</h2>
-        <p class="mt-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla libero nisl, pretium nec lectus ut, venenatis euismod est. Vestibulum faucibus in eros imperdiet iaculis. Donec tincidunt blandit erat, sit amet placerat quam tempor eu. Suspendisse vitae urna non mauris tempor facilisis dapibus eget nisl. Nullam et malesuada dui. Aliquam blandit, libero at laoreet tempus, nisl orci vestibulum libero, a maximus turpis arcu ac odio. Nulla a elit viverra, facilisis augue et, accumsan est. Nam facilisis, purus sed mattis hendrerit, ligula lorem varius eros, vel pulvinar ipsum augue ut nulla. Sed iaculis auctor tempus. Maecenas sed vulputate mauris.        </p>
-
-      </div>
-
-      <div class="col-lg-6">
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">September</p>
-              <p class="timeline-desc">Nomination Period</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">October / November</p>
-              <p class="timeline-desc">Judging Process</p>
-            </div>
-          </div>
-          <div class="timeline-item active">
-            <span class="timeline-dot highlight"></span>
-            <div>
-              <p class="brandsecondary-color fw-bold">December</p>
-              <p class="timeline-desc fw-bold">Awards Listicle announced</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">January</p>
-              <p class="timeline-desc">WEF Davos Uplift event</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">Feb–June</p>
-              <p class="timeline-desc">Schedule of virtual and potentially in-person events for awardees+sponsors</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">June</p>
-              <p class="timeline-desc">Awards dinner during LCAW</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div>
-              <p class="brandsecondary-color">September</p>
-              <p class="timeline-desc">New Nomination Period for Year 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
 
 <!-- CONTACT US -->
 <div id="contact-success"></div>
 <section id="contact" class="milestone-section">
   <div class="container py-5">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <p class="text-center mb-5">
-      Have questions or ideas? Reach out and let's connect!
-    </p>
+    <h2 class="text-center mb-4">{{ site_content('contact_title', 'Contact Us') }}</h2>
+    <p class="text-center mb-5">{{ site_content('contact_subtitle', 'Have questions or ideas? Reach out and let\'s connect!') }}</p>
 
     <!-- Success Message -->
     @if(session('success'))
@@ -500,54 +298,26 @@
     <form action="{{ route('contact.store') }}" method="POST" class="row justify-content-center">
       @csrf
       <div class="col-md-8">
-        
         <div class="input-group mb-3">
-          <input
-            type="email"
-            name="email"
-            class="form-control"
-            placeholder="Enter your email"
-            aria-label="Email"
-            style="background-color: rgba(255, 255, 255, 0.7);"
-            value="{{ old('email') }}"
-            required
-          >
+          <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Email" style="background-color: rgba(255, 255, 255, 0.7);" value="{{ old('email') }}" required>
         </div>
 
         <div class="input-group mb-3">
-          <input
-            type="tel"
-            name="phone"
-            class="form-control"
-            placeholder="Enter your phone number"
-            aria-label="Phone"
-            style="background-color: rgba(255, 255, 255, 0.7);"
-            value="{{ old('phone') }}"
-          >
+          <input type="tel" name="phone" class="form-control" placeholder="Enter your phone number" aria-label="Phone" style="background-color: rgba(255, 255, 255, 0.7);" value="{{ old('phone') }}">
         </div>
 
         <div class="input-group mb-3">
-  <textarea
-    name="message"
-    class="form-control"
-    rows="5"
-    placeholder="Your message"
-    aria-label="Message"
-    required
-    style="background-color: rgba(255, 255, 255, 0.7);"
-  >{{ old('message') }}</textarea>
-</div>
+          <textarea name="message" class="form-control" rows="5" placeholder="Your message" aria-label="Message" required style="background-color: rgba(255, 255, 255, 0.7);">{{ old('message') }}</textarea>
+        </div>
 
         <div class="text-center">
-        <button type="submit"class="btn  rounded-pill" style="background-color:#ad715c; color:white;" > Send Message <span class="arrow">→</span></button>
+          <button type="submit" class="btn rounded-pill" style="background-color:#ad715c; color:white;">{{ site_content('contact_cta_text', 'Send Message') }} <span class="arrow">→</span></button>
         </div>
-
       </div>
     </form>
   </div>
 </section>
 
-<!-- Placeholder color fix -->
 <style>
 input::placeholder,
 textarea::placeholder {
@@ -556,9 +326,6 @@ textarea::placeholder {
 }
 </style>
 
-
-
-  <hr class="text-light col-12">
-
+<hr class="text-light col-12">
 
 @endsection

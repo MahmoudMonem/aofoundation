@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\Eventimage;
+use App\Models\Organizer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,9 @@ class AdminEventsController extends Controller
      */
     public function create()
     {
-        return view('admin.events.create');
+         $organizers = Organizer::all();
+           return view('admin.events.create', compact('organizers'));
+
     }
 
     /**
@@ -48,7 +51,10 @@ class AdminEventsController extends Controller
             'organizer_id' => 'nullable|integer',
             'event_images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'featured_image_index' => 'nullable|integer',
+            
+
         ]);
+        $validated['organizer_id'] = $validated['organizer_id'] ?? 1;
 
         // Generate slug from English title
         $validated['slug'] = Str::slug($validated['title_en']);
@@ -86,19 +92,19 @@ class AdminEventsController extends Controller
 
         // Handle multiple event images
         if ($request->hasFile('event_images')) {
-            $featuredIndex = $request->input('featured_image_index', 0);
+
+        foreach ($request->file('event_images') as $index => $image) {
+        $imageName = time() . '_' . $index . '_' . $image->getClientOriginalName();
+        $image->move(public_path('events'), $imageName);
+
+        Eventimage::create([
             
-            foreach ($request->file('event_images') as $index => $image) {
-                $imageName = time() . '_' . $index . '_' . $image->getClientOriginalName();
-                $image->move(public_path('events'), $imageName);
-                
-                Eventimage::create([
-                    'event_id' => $event->id,
-                    'img' => $imageName,
-                    'featured' => ($index == $featuredIndex) ? 1 : 0,
-                    'available' => 1,
-                ]);
-            }
+        'event_id' => $event->id,
+        'img' => $imageName,
+        'featured' => $index === 0 ? 1 : 0, // 👈 ONLY FIRST IMAGE
+        'available' => 1,
+        ]);
+}
         }
 
         return redirect()->route('admin.events.index')

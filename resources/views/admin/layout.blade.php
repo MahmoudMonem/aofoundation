@@ -185,6 +185,16 @@
             </a>
             @endif
 
+
+            @if(Auth::user()->hasRole('Admin','Content Editor'))
+
+                        <a class="nav-link {{ request()->routeIs('admin.users.index.*') ? 'active' : '' }}" 
+               href="{{ route('admin.users.index') }}">
+               <i class="bi bi-images"></i>
+                Client Logos
+            </a>
+
+@endif
             <!-- Content Management -->
             @if(Auth::user()->hasRole('Admin','Content Editor'))
             <a class="nav-link {{ request()->routeIs('admin.content.*') ? 'active' : '' }}" 

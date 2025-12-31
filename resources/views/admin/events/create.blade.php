@@ -73,6 +73,18 @@
                     </div>
                     
                     <div class="row">
+
+                    <div class="mb-3">
+    <label class="form-label">Organizer</label>
+    <select name="organizer_id" class="form-select">
+        @foreach($organizers as $organizer)
+            <option value="{{ $organizer->id }}"
+                {{ old('organizer_id', 1) == $organizer->id ? 'selected' : '' }}>
+                {{ $organizer->name }}
+            </option>
+        @endforeach
+    </select>
+</div>
                         <div class="col-md-6 mb-3">
                             <label for="short_desc_en" class="form-label">Short Description (English)</label>
                             <textarea class="form-control @error('short_desc_en') is-invalid @enderror" 

@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Eventimage extends Model
 {
+
+
+        protected $fillable = ['event_id', 'img', 'available'];
+
+
     use HasFactory;
 
     public function event()
