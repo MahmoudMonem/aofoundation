@@ -50,6 +50,7 @@ Route::middleware(['auth', 'check.role_or_permission:Admin,Operations Manager,Co
     Route::resource('events', AdminEventsController::class, ['as' => 'admin']);
     Route::patch('events/{event}/toggle-available', [AdminEventsController::class, 'toggleAvailable'])->name('admin.events.toggle-available');
     Route::patch('events/{event}/toggle-featured', [AdminEventsController::class, 'toggleFeatured'])->name('admin.events.toggle-featured');
+    
     Route::get('client-logos', [AdminClientLogoController::class, 'index'])->name('admin.logos.index');
    
     Route::post('client-logos', [AdminClientLogoController::class, 'store'])->name('admin.client-logos.store');

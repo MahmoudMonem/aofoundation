@@ -158,23 +158,6 @@
             </a>
             @endif
 
-            <!-- Projects -->
-            @if(Auth::user()->hasRole('Admin','Content Editor'))
-            <a class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}" 
-               href="#">
-                <i class="bi bi-kanban"></i>
-                Projects
-            </a>
-            @endif
-
-            <!-- Organizers -->
-            @if(Auth::user()->hasRole('Admin','Content Editor'))
-            <a class="nav-link {{ request()->routeIs('admin.organizers.*') ? 'active' : '' }}" 
-               href="#">
-                <i class="bi bi-people-fill"></i>
-                Organizers
-            </a>
-            @endif
 
             <!-- Users -->
             @if(Auth::user()->hasRole('Admin','Operations Manager'))
@@ -188,8 +171,8 @@
 
             @if(Auth::user()->hasRole('Admin','Content Editor'))
 
-                        <a class="nav-link {{ request()->routeIs('admin.users.index.*') ? 'active' : '' }}" 
-               href="{{ route('admin.users.index') }}">
+                        <a class="nav-link {{ request()->routeIs('admin.logos.*') ? 'active' : '' }}" 
+               href="{{ route('admin.logos.index') }}">
                <i class="bi bi-images"></i>
                 Client Logos
             </a>
@@ -204,6 +187,25 @@
             </a>
             @endif
 
+
+                        <!-- Projects 
+            @if(Auth::user()->hasRole('Admin','Content Editor'))
+            <a class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}" 
+               href="#">
+                <i class="bi bi-kanban"></i>
+                Projects
+            </a>
+            @endif
+
+      
+            @if(Auth::user()->hasRole('Admin','Content Editor'))
+            <a class="nav-link {{ request()->routeIs('admin.organizers.*') ? 'active' : '' }}" 
+               href="#">
+                <i class="bi bi-people-fill"></i>
+                Organizers
+            </a>
+            @endif
+-->
             <hr class="text-secondary mx-3 my-3">
 
             <!-- View Site -->
