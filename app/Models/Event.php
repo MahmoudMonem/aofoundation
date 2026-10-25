@@ -23,6 +23,8 @@ class Event extends Model
         'featured',
         'available',
         'slug',
+        'created_at',
+        'updated_at',
     ];
 
     protected $casts = [

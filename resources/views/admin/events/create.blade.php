@@ -110,7 +110,7 @@
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="desc_en" class="form-label">Full Description (English)</label>
+                            <label for="desc_en" class="form-label">Event Date in (English)</label>
                             <textarea class="form-control @error('desc_en') is-invalid @enderror" 
                                       id="desc_en" 
                                       name="desc_en" 
@@ -120,7 +120,7 @@
                             @enderror
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="desc_ar" class="form-label">Full Description (Arabic)</label>
+                            <label for="desc_ar" class="form-label">Event Date in (Arabic)</label>
                             <textarea class="form-control @error('desc_ar') is-invalid @enderror" 
                                       id="desc_ar" 
                                       name="desc_ar" 

@@ -201,7 +201,7 @@
 
         <div class="col text-center">
           <span class="badge text-white d-inline-flex align-items-center px-3 py-2" style="background-color:rgb(97, 55, 40);">
-            {{ $event->created_at->format('D, M j, Y') }}
+           {{$event->desc_en}}
           </span>
           <div id="carousel-{{ $event->id }}" class="carousel slide mb-3" data-bs-ride="carousel">
             <div class="carousel-inner">
